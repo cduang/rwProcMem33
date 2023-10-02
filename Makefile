@@ -5,7 +5,7 @@ ifneq ($(KERNELRELEASE),)
 	$(MODULE_NAME)-objs:=$(RESMAN_GLUE_OBJS) $(RESMAN_CORE_OBJS)
 	obj-m := rwProcMem37.o
 else
-	KDIR := /cepheus-q-oss/out
+	KDIR := /source/out
 all:
 	make -C $(KDIR) M=$(PWD) ARCH=arm64 SUBARCH=arm64 modules
 clean:    
